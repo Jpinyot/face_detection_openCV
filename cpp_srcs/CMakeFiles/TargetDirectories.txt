@@ -1,0 +1,3 @@
+/Users/joseppinot/Desktop/gitHub/face_recognition_openCV/cpp_srcs/CMakeFiles/rebuild_cache.dir
+/Users/joseppinot/Desktop/gitHub/face_recognition_openCV/cpp_srcs/CMakeFiles/edit_cache.dir
+/Users/joseppinot/Desktop/gitHub/face_recognition_openCV/cpp_srcs/CMakeFiles/facial_det.dir
