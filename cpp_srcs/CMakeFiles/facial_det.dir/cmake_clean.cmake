@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.o"
+  "CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.o"
   "facial_det.pdb"
   "facial_det"
 )

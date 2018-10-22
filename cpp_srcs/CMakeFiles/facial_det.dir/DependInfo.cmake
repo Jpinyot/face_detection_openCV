@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/joseppinot/Desktop/gitHub/face_recognition_openCV/cpp_srcs/srcs/go_on_live.cpp" "/Users/joseppinot/Desktop/gitHub/face_recognition_openCV/cpp_srcs/CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.o"
+  "/Users/joseppinot/Desktop/gitHub/face_recognition_openCV/cpp_srcs/srcs/facial_detection2.cpp" "/Users/joseppinot/Desktop/gitHub/face_recognition_openCV/cpp_srcs/CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 
