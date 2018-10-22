@@ -123,32 +123,32 @@ facial_det/fast:
 	$(MAKE) -f CMakeFiles/facial_det.dir/build.make CMakeFiles/facial_det.dir/build
 .PHONY : facial_det/fast
 
-srcs/facial_detection2.o: srcs/facial_detection2.cpp.o
+srcs/go_on_live.o: srcs/go_on_live.cpp.o
 
-.PHONY : srcs/facial_detection2.o
+.PHONY : srcs/go_on_live.o
 
 # target to build an object file
-srcs/facial_detection2.cpp.o:
-	$(MAKE) -f CMakeFiles/facial_det.dir/build.make CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.o
-.PHONY : srcs/facial_detection2.cpp.o
+srcs/go_on_live.cpp.o:
+	$(MAKE) -f CMakeFiles/facial_det.dir/build.make CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.o
+.PHONY : srcs/go_on_live.cpp.o
 
-srcs/facial_detection2.i: srcs/facial_detection2.cpp.i
+srcs/go_on_live.i: srcs/go_on_live.cpp.i
 
-.PHONY : srcs/facial_detection2.i
+.PHONY : srcs/go_on_live.i
 
 # target to preprocess a source file
-srcs/facial_detection2.cpp.i:
-	$(MAKE) -f CMakeFiles/facial_det.dir/build.make CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.i
-.PHONY : srcs/facial_detection2.cpp.i
+srcs/go_on_live.cpp.i:
+	$(MAKE) -f CMakeFiles/facial_det.dir/build.make CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.i
+.PHONY : srcs/go_on_live.cpp.i
 
-srcs/facial_detection2.s: srcs/facial_detection2.cpp.s
+srcs/go_on_live.s: srcs/go_on_live.cpp.s
 
-.PHONY : srcs/facial_detection2.s
+.PHONY : srcs/go_on_live.s
 
 # target to generate assembly for a file
-srcs/facial_detection2.cpp.s:
-	$(MAKE) -f CMakeFiles/facial_det.dir/build.make CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.s
-.PHONY : srcs/facial_detection2.cpp.s
+srcs/go_on_live.cpp.s:
+	$(MAKE) -f CMakeFiles/facial_det.dir/build.make CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.s
+.PHONY : srcs/go_on_live.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... facial_det"
-	@echo "... srcs/facial_detection2.o"
-	@echo "... srcs/facial_detection2.i"
-	@echo "... srcs/facial_detection2.s"
+	@echo "... srcs/go_on_live.o"
+	@echo "... srcs/go_on_live.i"
+	@echo "... srcs/go_on_live.s"
 .PHONY : help
 
 

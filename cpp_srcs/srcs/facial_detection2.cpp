@@ -31,10 +31,12 @@ int main(int ac, char **av)
     /* Read the image file */
     Mat frame = imread(av[1]);
     /* Apply the classifier to the frame */
-    if (!frame.empty()) detectAndDisplay(frame);
-    else printf(" --(!) No captured frame -- Break!");
-    waitKey(2000);
-    return (0);
+    if (!frame.empty())
+        detectAndDisplay(frame);
+    else
+        printf(" --(!) No captured frame -- Break!");
+    int c = waitKey(2000);
+    if (27 == char(c)) return (0);
 }
 
 // Function detectAndDisplay
@@ -51,6 +53,7 @@ void detectAndDisplay(Mat frame)
     cvtColor(frame, frame_gray, COLOR_BGR2GRAY);
     equalizeHist(frame_gray, frame_gray);
 
+    imshow("original", faces);
     // Detect faces
     face_cascade.detectMultiScale(frame_gray, faces, 1.1, 2, 0 | CASCADE_SCALE_IMAGE, Size(30, 30));
 
@@ -64,6 +67,8 @@ void detectAndDisplay(Mat frame)
     size_t ib = 0; // ib is index of biggest element
     int ab = 0; // ab is area of biggest element
 
+	if (faces.size() <= 0)
+		std::cout << '$';
     for (ic = 0; ic < faces.size(); ic++) // Iterate through all current elements (detected faces)
     {
         roi_c.x = faces[ic].x;
@@ -112,7 +117,7 @@ void detectAndDisplay(Mat frame)
     text = sstm.str();
 
     putText(frame, text, cvPoint(30, 30), FONT_HERSHEY_COMPLEX_SMALL, 0.8, cvScalar(0, 0, 255), 1, CV_AA);
-    imshow("original", frame);
+    /* imshow("original", frame); */
 
     if (!crop.empty())
         imshow("detected", crop);
