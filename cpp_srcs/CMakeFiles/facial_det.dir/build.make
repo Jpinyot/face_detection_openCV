@@ -57,27 +57,27 @@ include CMakeFiles/facial_det.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/facial_det.dir/flags.make
 
-CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.o: CMakeFiles/facial_det.dir/flags.make
-CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.o: srcs/facial_detection2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/joseppinot/Desktop/gitHub/face_recognition_openCV/cpp_srcs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.o -c /Users/joseppinot/Desktop/gitHub/face_recognition_openCV/cpp_srcs/srcs/facial_detection2.cpp
+CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.o: CMakeFiles/facial_det.dir/flags.make
+CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.o: srcs/go_on_live.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/joseppinot/Desktop/gitHub/face_recognition_openCV/cpp_srcs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.o -c /Users/joseppinot/Desktop/gitHub/face_recognition_openCV/cpp_srcs/srcs/go_on_live.cpp
 
-CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joseppinot/Desktop/gitHub/face_recognition_openCV/cpp_srcs/srcs/facial_detection2.cpp > CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.i
+CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joseppinot/Desktop/gitHub/face_recognition_openCV/cpp_srcs/srcs/go_on_live.cpp > CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.i
 
-CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joseppinot/Desktop/gitHub/face_recognition_openCV/cpp_srcs/srcs/facial_detection2.cpp -o CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.s
+CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joseppinot/Desktop/gitHub/face_recognition_openCV/cpp_srcs/srcs/go_on_live.cpp -o CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.s
 
 # Object files for target facial_det
 facial_det_OBJECTS = \
-"CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.o"
+"CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.o"
 
 # External object files for target facial_det
 facial_det_EXTERNAL_OBJECTS =
 
-facial_det: CMakeFiles/facial_det.dir/srcs/facial_detection2.cpp.o
+facial_det: CMakeFiles/facial_det.dir/srcs/go_on_live.cpp.o
 facial_det: CMakeFiles/facial_det.dir/build.make
 facial_det: /usr/local/lib/libopencv_stitching.3.4.3.dylib
 facial_det: /usr/local/lib/libopencv_superres.3.4.3.dylib
