@@ -16,19 +16,17 @@ Rect				main_face;
 
 void	ft_error(char i)
 {
-	if (i == 0)
-		cout << "Error opening video capture\n";
-	if (i == 1)
-		cout << "No captured frame\n";
+	if (i == 0) cout << "Error loading cascade\n";
+	if (i == 1) cout << "Error opening video capture\n";
+	if (i == 2) cout << "No captured frame\n";
 	exit (1);
 }
 
 void	frame_in_window(Mat frame)
 {
-	if (face_detected)
-		rectangle(frame, main_face, 255,2,0);
+	if (face_detected) rectangle(frame, main_face, 0, 10, 0);
 	imshow(window_name, frame);
-	if(waitKey(25) == 27) exit (1);
+	if (waitKey(25) == 27) exit (1);
 }
 
 void	detect_main_face(void)
@@ -39,16 +37,13 @@ void	detect_main_face(void)
 		if (faces[i].area() > faces[cnt].area())
 			cnt = i;
 	main_face = faces[cnt];
-	/* return (ret); */
 }
 
 bool	non_detected_face(Mat frame)
 {
     Mat				frame_gray;
 
-    /* cvtColor(frame, frame_gray, COLOR_BGR2GRAY); */
-    /* equalizeHist(frame_gray, frame_gray); */
-    face_cascade->detectMultiScale(frame, faces, 1.1, 3, 0,
+    face_cascade->detectMultiScale(frame, faces, 1.2, 3, 0,
         Size(frame.rows / 5, frame.rows / 5),
         Size(frame.rows * 2 / 3, frame.rows * 2 / 3));
 	if (faces.empty()) return(false);
@@ -58,7 +53,7 @@ bool	non_detected_face(Mat frame)
 
 bool	detected_face(Mat frame)
 {
-	face_cascade->detectMultiScale(frame, faces, 1.1, 3, 0,
+	face_cascade->detectMultiScale(frame, faces, 1.2, 3, 0,
 		Size(main_face.width * 8 /10, main_face.height * 8 / 10),
 		Size(main_face.width * 12 / 10, main_face.width * 12 / 10));
 	if (faces.empty()) return (false);
@@ -73,29 +68,28 @@ int main(int argc, const char** argv)
 
 	face_cascade = new CascadeClassifier(face_cascade_name);
 	if(face_cascade->empty())
-	{
-		cout << "Error loading cascade\n";
-		return (-1);
-	}
+		ft_error(0);
 	int camera_device = 0;
 	capture.open(camera_device);
 	if (!capture.isOpened())
-		ft_error(0);
+		ft_error(2);
 	while (!face_detected)
 	{
 		if(!capture.read(frame))
-			ft_error(1);
+			ft_error(3);
 		if (non_detected_face(frame))
 			face_detected = true;
 		frame_in_window(frame);
 		while (face_detected)
 		{
+			cout << "Face detected." << '\n';
 			if(!capture.read(frame))
-				ft_error(1);
+				ft_error(3);
 			if (!detected_face(frame))
 				face_detected = false;
 			frame_in_window(frame);
 		}
+		cout << "No face detected." << '\n';
 	}
 	return (0);
 }
